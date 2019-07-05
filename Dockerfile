@@ -22,4 +22,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/ralph-irving/squeezelite.git && cd squeezelite && make && cp squeezelite /usr/bin
 
-CMD squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
+CMD squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC -C 1
