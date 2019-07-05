@@ -1,4 +1,4 @@
-FROM debian/stable-slim:arm64v8
+FROM debian/stable-slim
 
 MAINTAINER brainstormi
 
