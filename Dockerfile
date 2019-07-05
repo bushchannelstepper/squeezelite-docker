@@ -18,11 +18,8 @@ RUN apt-get update && apt-get install -y \
     libasound2-data \
     libvorbis-dev \
     libvo-aacenc-dev \
-    libmpg123-dev \
-    wget
+    libmpg123-dev
 
-RUN git clone https://github.com/ralph-irving/squeezelite.git
+RUN git clone https://github.com/ralph-irving/squeezelite.git && cd squeezelite && make && cp squeezelite /usr/bin
 
-RUN cd squeezelite & make
-
-CMD /squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
+CMD squeezelite -o $SOUNDDEVICE -s $SERVER -n $CLIENTNAME -m $CLIENTMAC
