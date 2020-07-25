@@ -1,0 +1,9 @@
+.git
+.gitignore
+._*
+.DS_Store
+Dockerfile*
+docker-compose*
+README.md
+LICENSE
+
